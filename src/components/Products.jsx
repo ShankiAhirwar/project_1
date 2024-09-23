@@ -13,22 +13,26 @@ function Products() {
 
         },
         {
-            title:'YIR 2022' ,description:'Our second year was filled with great events, exciting projects, awards and amazing people - so we made another showcase to celebrate.',live:true, case:false
+            title:'YIR 2022' ,description:'Our second year was filled with great events, exciting projects, awards and amazing people - so we made another showcase to celebrate.',live:true, case:true
 
         },
         {
-            title:'Yahoo!' ,description:'We enhanced the New York Fashion Week, by creating a fully digital AR fashion experience for Yahoo and Maisie Wilen, featuring holographic 3D models and an integrated web shop.',live:true, case:false
+            title:'Yahoo!' ,description:'We enhanced the New York Fashion Week, by creating a fully digital AR fashion experience for Yahoo and Maisie Wilen, featuring holographic 3D models and an integrated web shop.',live:true, case:true
 
         },
         {
-            title:'Rainfall' ,description:'We crafted a website for Rainfall Ventures, developing prototypes and custom code that ultimately allows their team to update content regularly and with ease.',live:true, case:false
+            title:'Rainfall' ,description:'We crafted a website for Rainfall Ventures, developing prototypes and custom code that ultimately allows their team to update content regularly and with ease.',live:true, case:true
 
         },
     ]
 
   return (
-    <div>
-      <Product/>
+    <div className='mt-32'>
+
+        {products.map((product, index) => (
+            <Product key={index} product={product} />
+        ))}
+      
     </div>
   )
 }

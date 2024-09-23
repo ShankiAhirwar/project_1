@@ -16,7 +16,7 @@ function Stripes() {
   return (
     <div className='flex items-center flex-warp  mt-10'>
      {data.map((elem,index)=>(
-        <Stripe val={elem} />
+        <Stripe  key={index} val={elem} />
      ))}
     </div>
   )

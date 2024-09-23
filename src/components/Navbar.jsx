@@ -12,7 +12,7 @@ function Navbar() {
         <div className='links flex gap-20 ml-28 font-regular  '>
 
         {["Home","Work","Culture","",'News'].map((elem,index) =>( 
-            elem.length === 0 ? <span  className=' w-[1px]  bg-zinc-600 '></span> :(          <a className='text-sm flex items-center gap-1' href="#">
+             elem.length === 0 ? <span   key={index} className=' w-[1px]  bg-zinc-600 '></span> :(          <a  key={index} className='text-sm flex items-center gap-1' href="#">
                 
                 {index === 1 && (<span style={{boxShadow:"0 0 0.45em #00FF19"}} className='inline-block w-1 h-1 rounded-full bg-green-400  '></span>)}
                 
