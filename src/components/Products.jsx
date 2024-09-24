@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Product from './Product'
+import { motion } from 'framer-motion'
 
 function Products() {
 
@@ -26,13 +27,32 @@ function Products() {
         },
     ]
 
+    const[pos,setpos]=useState()
+    const mover = (val)=>{
+        setpos(val*23)
+
+    }
+
   return (
-    <div className='mt-32'>
+    <div className='mt-32 relative'>
 
         {products.map((product, index) => (
-            <Product key={index} product={product} />
+            <Product key={index} product={product} mover={mover} count={index} />
         ))}
-      
+      <div  className='h-full w-full  absolute top-0 pointer-events-none '>
+        <motion.div initial={{y:pos, x:"-50%"}}
+        animate={{y:pos+"rem"}}
+        transition={{ease:[0.76, 0, 0.24, 1],duretion:.6}}
+         className='w-[33rem] h-[23rem] bg-white absolute left-[44%]   overflow-hidden'>
+         
+           < motion.div animate={{y:-pos+"rem"}} transition={{ease:[0.76, 0, 0.24, 1],duretion:.5}} className='w-full h-full bg-sky-100 '><video src="public/arqitel-94yUcBU8.mp4"></video></ motion.div>
+           < motion.div animate={{y:-pos+"rem"}} transition={{ease:[0.76, 0, 0.24, 1],duretion:.5}} className='w-full h-full bg-sky-300 '><video src="public/ttr-lEHQxwYz.mp4"></video></ motion.div>
+           < motion.div animate={{y:-pos+"rem"}} transition={{ease:[0.76, 0, 0.24, 1],duretion:.5}} className='w-full h-full bg-sky-500 '><video src="public/yir-cyYkW6sc.mp4"></video></ motion.div>
+           < motion.div animate={{y:-pos+"rem"}} transition={{ease:[0.76, 0, 0.24, 1],duretion:.5}} className='w-full h-full bg-sky-700 '><video src="public/yahoo--1sy27pr.mp4"></video></ motion.div>
+           < motion.div animate={{y:-pos+"rem"}} transition={{ease:[0.76, 0, 0.24, 1],duretion:.5}} className='w-full h-full bg-sky-900 '><video src="public/rainfall-WQuxxtU2.mp4"></video></ motion.div>
+
+        </motion.div>
+      </div>
     </div>
   )
 }
