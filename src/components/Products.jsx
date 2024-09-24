@@ -43,13 +43,13 @@ function Products() {
         <motion.div initial={{y:pos, x:"-50%"}}
         animate={{y:pos+"rem"}}
         transition={{ease:[0.76, 0, 0.24, 1],duretion:.6}}
-         className='w-[33rem] h-[23rem] bg-white absolute left-[44%]   overflow-hidden'>
+         className='w-[33rem] h-[23rem]  absolute left-[44%] rounded-xl  overflow-hidden'>
          
-           < motion.div animate={{y:-pos+"rem"}} transition={{ease:[0.76, 0, 0.24, 1],duretion:.5}} className='w-full h-full bg-sky-100 '><video src="public/arqitel-94yUcBU8.mp4"></video></ motion.div>
-           < motion.div animate={{y:-pos+"rem"}} transition={{ease:[0.76, 0, 0.24, 1],duretion:.5}} className='w-full h-full bg-sky-300 '><video src="public/ttr-lEHQxwYz.mp4"></video></ motion.div>
-           < motion.div animate={{y:-pos+"rem"}} transition={{ease:[0.76, 0, 0.24, 1],duretion:.5}} className='w-full h-full bg-sky-500 '><video src="public/yir-cyYkW6sc.mp4"></video></ motion.div>
-           < motion.div animate={{y:-pos+"rem"}} transition={{ease:[0.76, 0, 0.24, 1],duretion:.5}} className='w-full h-full bg-sky-700 '><video src="public/yahoo--1sy27pr.mp4"></video></ motion.div>
-           < motion.div animate={{y:-pos+"rem"}} transition={{ease:[0.76, 0, 0.24, 1],duretion:.5}} className='w-full h-full bg-sky-900 '><video src="public/rainfall-WQuxxtU2.mp4"></video></ motion.div>
+           < motion.div animate={{y:-pos+"rem"}} transition={{ease:[0.76, 0, 0.24, 1],duretion:.5}} className='w-full h-full  '><video src="public/arqitel-94yUcBU8.mp4"></video></ motion.div>
+           < motion.div animate={{y:-pos+"rem"}} transition={{ease:[0.76, 0, 0.24, 1],duretion:.5}} className='w-full h-full '><video src="public/ttr-lEHQxwYz.mp4"></video></ motion.div>
+           < motion.div animate={{y:-pos+"rem"}} transition={{ease:[0.76, 0, 0.24, 1],duretion:.5}} className='w-full h-full '><video src="public/yir-cyYkW6sc.mp4"></video></ motion.div>
+           < motion.div animate={{y:-pos+"rem"}} transition={{ease:[0.76, 0, 0.24, 1],duretion:.5}} className='w-full h-full '><video src="public/yahoo--1sy27pr.mp4"></video></ motion.div>
+           < motion.div animate={{y:-pos+"rem"}} transition={{ease:[0.76, 0, 0.24, 1],duretion:.5}} className='w-full h-full '><video src="public/rainfall-WQuxxtU2.mp4"></video></ motion.div>
 
         </motion.div>
       </div>
