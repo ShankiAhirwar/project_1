@@ -1,8 +1,11 @@
+import { motion } from 'framer-motion';
 import React from 'react'
 import { HiArrowLongRight } from "react-icons/hi2";
-function Card( {wirth,start,para,hover}) {
+function Card( {wirth,start,para,hover='false'}) {
+
+  
   return (
-    <div className={`gap-3 bg-zinc-700 rounded-xl p-5 hover:${hover}  ${wirth} min-h-[30rem] flex flex-col justify-between  `}>
+    <motion.div whileHover={{backgroundColor:hover === 'true'&& "#7443ff",padding:'35px'}} className={`gap-3 bg-zinc-700 rounded-xl p-5  ${wirth} min-h-[30rem] flex flex-col justify-between  `}>
       <div>
       <div className=' flex justify-between items-center'>
         <h2>hello</h2> 
@@ -29,7 +32,7 @@ function Card( {wirth,start,para,hover}) {
                  </p>)}
                  
             </div>
-    </div>
+    </motion.div>
   )
 }
 

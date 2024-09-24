@@ -8,7 +8,7 @@ function Marquee({imageurl,direction}) {
       <motion.div
        initial={{x:direction === 'left' ? '0' :'-100%'}}
        animate={{x:direction === 'left' ? '-100%':'0'}}
-        transition={{ease:'linear',duration:'20',repeat:Infinity}}
+        transition={{ease:'linear',duration:'30',repeat:Infinity}}
         className='flex  pr-40 gap-40 py-10 flex-shrink-0  '>
       {imageurl.map((url,index)=>(
          <img key={index} src={url} alt="" className='' /> ))}
@@ -16,7 +16,7 @@ function Marquee({imageurl,direction}) {
 
      <motion.div initial={{x:direction === 'left' ?'0':'-100%'}}
        animate={{x:direction === 'left' ? '-100%':'0'}}
-        transition={{ease:'linear',duration:'20',repeat:Infinity}}
+        transition={{ease:'linear',duration:'30',repeat:Infinity}}
         className='flex  pr-40 gap-40 py-10 flex-shrink-0  '>
       {imageurl.map((url,index)=>(
          <img key={index} src={url} alt="" className='' /> ))}
